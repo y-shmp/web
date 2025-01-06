@@ -1,0 +1,108 @@
+/* 基本スタイル */
+:root {
+    --font-main: "Yu Gothic", sans-serif;
+}
+
+body {
+    font-family: 'Yu Gothic', sans-serif; /* フォールバックを含めて指定 */
+    background-color: #f9f9f9;
+}
+
+/* ヘッダー */
+header {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.site-title {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.2em;
+}
+
+h2 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 0.8em;
+}
+
+/* ナビゲーション */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* main セクションのスタイル */
+main {
+    padding: 20px; /* 内側の余白を追加 */
+    margin: 0 auto; /* ブラウザ中央に揃える */
+    max-width: 800px; /* セクションの幅を制限 */ 
+    padding-bottom: 60px; 
+}
+
+section {
+    font-family: 'Yu Gothic', sans-serif;
+    line-height: 1.4; /* 行間を適度に設定 */
+    font-size: 0.9em; /* 文字を少し小さめに */
+}
+
+h1 {
+    font-size: 1.0em; /* メイン見出しを目立たせる */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 0.8em; /* サブ見出しを少し大きめに */
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 5px 0; /* 段落間の余白を調整 */
+}
+
+ul {
+    margin: 5px 0 10px 20px; /* 箇条書きの余白を調整 */
+    padding: 0;
+    list-style-type: none; /* ・を削除 */
+}
+
+ul li {
+    margin-bottom: 5px; /* リスト項目の間隔 */
+}
+
+/* フッター */
+footer {
+    position: fixed; /* フッターを最下部に固定 */
+    bottom: 0; /* 画面の下に配置 */
+    left: 50%; /* 横方向の中央揃え */
+    transform: translateX(-50%); /* 50%の左方向に移動して中央揃えに */
+    font-size: 0.8em;
+    text-align: center; /* 中央揃え */
+    white-space: nowrap; /* テキストを1行で表示 */
+    margin-top: 60px; /* 上部に余白を追加 */
+    margin-bottom: 0; /* 下部の余白をゼロに */
+    padding: 10px 0; /* フッター内の上下の余白 */
+}
