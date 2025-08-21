@@ -1,17 +1,28 @@
+/* ==============================
+   基本スタイル
+   ============================== */
 :root {
     --font-main: "Yu Gothic", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: var(--font-main);
     background-color: #f9f9f9;
-    margin: 0;
+    line-height: 1.4;
+    color: #333;
 }
 
-/* ヘッダー */
+/* ==============================
+   ヘッダー
+   ============================== */
 header {
     background-color: #f9f9f9;
-    color: #333;
     padding: 10px 20px;
 }
 
@@ -20,24 +31,28 @@ header {
     color: inherit;
 }
 
+h1, h2 {
+    font-weight: normal;
+}
+
 h1 {
-    margin: 0 0 10px 0;
     font-size: 1em;
-    padding: 10px 0;
+    margin-bottom: 10px;
 }
 
 h2 {
-    margin: 20px 0 5px 0;
     font-size: 0.8em;
+    margin: 20px 0 5px 0;
 }
 
-/* ナビゲーション */
+/* ==============================
+   ナビゲーション
+   ============================== */
 .nav-list {
     list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 20px;
 }
 
 .nav-list a {
@@ -46,12 +61,13 @@ h2 {
     font-weight: 400;
 }
 
-/* main セクション */
+/* ==============================
+   メインセクション
+   ============================== */
 main {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px 20px 60px;
-    line-height: 1.4;
+    padding: 20px;
     font-size: 0.9em;
 }
 
@@ -60,22 +76,59 @@ p {
 }
 
 ul {
-    margin: 5px 0 10px 20px;
     list-style: none;
+    margin: 5px 0 10px 20px;
 }
 
 ul li {
     margin-bottom: 5px;
 }
 
-/* フッター */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.8em;
-    text-align: center;
-    white-space: nowrap;
-    padding: 10px 0;
+/* ==============================
+   ギャラリー
+   ============================== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
 }
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ==============================
+   モーダル
+   ============================== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255,255,255,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+    color: #000;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+.modal-caption {
+    ma
