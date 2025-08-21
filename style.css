@@ -84,6 +84,16 @@ ul li {
     margin-bottom: 5px;
 }
 
+/* フッター */
+footer {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    text-align: center; /* 中央揃え */
+    white-space: nowrap; /* テキストを1行で表示 */
+
 /* ==============================
    ギャラリー
    ============================== */
@@ -132,3 +142,4 @@ ul li {
 
 .modal-caption {
     ma
+
